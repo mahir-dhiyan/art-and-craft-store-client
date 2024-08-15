@@ -4,10 +4,12 @@ import Footer from "../pages/footer/Footer";
 
 const Root = () => {
     return (
-        <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+        <div className="bg-[#ECF2EF]">
+            <div className="bg-[#CCDDD3] sticky top-0 z-10"> <Navbar className=""></Navbar></div>
+            <div className="mx-auto max-w-6xl h-full ">
+                <Outlet></Outlet>
+            </div>
+            <div className=""><Footer></Footer></div>
         </div>
     );
 };

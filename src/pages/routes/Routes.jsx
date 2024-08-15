@@ -5,6 +5,10 @@ import {
 import Root from "../../layout/Root";
 import Home from "../home/Home";
 import ErrorPage from "../errorpage/ErrorPage";
+import Register from "../register/Register";
+import AllArt from "../allart/AllArt";
+import MyArt from "../myart/MyArt";
+import AddArt from "../addart/AddArt";
 
   const router = createBrowserRouter([
     {
@@ -15,6 +19,22 @@ import ErrorPage from "../errorpage/ErrorPage";
         {
           path: "/",
           element: <Home></Home>,
+        },
+        {
+          path: "/register",
+          element: <Register></Register>,
+        },
+        {
+          path: "/allart",
+          element: <AllArt></AllArt>,
+        },
+        {
+          path: "/myart",
+          element: <MyArt></MyArt>,
+        },
+        {
+          path: "/addart",
+          element: <AddArt></AddArt>,
         },
       ],
     },
