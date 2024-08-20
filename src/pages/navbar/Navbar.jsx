@@ -2,15 +2,26 @@ import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
 import { TbLogin2 } from "react-icons/tb";
 import { PiCashRegister } from "react-icons/pi";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/Authproviders";
+import { Tooltip } from 'react-tooltip'
+import { IoPerson } from "react-icons/io5";
 const Navbar = () => {
+    const { logOut, user } = useContext(AuthContext);
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     const navLinks = <>
 
         <div className="md:flex md:flex-row md:space-y-0 md:gap-4 flex-col space-y-2  ">
 
             <li ><NavLink className='btn bg-transparent font-semibold text-[#a95543] text-lg border-none' to="/">Home</NavLink></li>
             <li><NavLink className='btn  bg-transparent font-semibold text-[#a95543] text-lg border-none' to="/allart">All Art & Craft Items</NavLink></li>
-            
-            
+
+
             <li><NavLink className='btn  bg-transparent font-semibold text-[#a95543] text-lg border-none' to="/addart">Add Craft Item</NavLink></li>
             <li><NavLink className='btn  bg-transparent font-semibold text-[#a95543] text-lg border-none' to="/myart">My Art & Craft List</NavLink></li>
 
@@ -51,11 +62,40 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end space-x-2">
-                <Link to="/login"><a className="btn p-2 bg-red-500 text-white md:text-lg">Login <TbLogin2 /></a></Link>
-                <Link to="/register"><a className="btn p-2 bg-green-600 text-white md:text-lg">Register <PiCashRegister /></a></Link>
+                {
+                    user ?
+                        <>
+                            <a id="clickable">
+                                <div className="avatar online">
+                                    <div className="w-14 rounded-full">
+                                        {
+                                            user.photoURL ?
+                                                <>
+                                                    <img src={user.photoURL} />
+                                                </> :
+                                                <>
+                                                    <p className="text-4xl text-black m-2"><IoPerson /></p>
+                                                </>
+                                        }
+
+
+                                    </div>
+                                </div>
+                            </a>
+                            <Tooltip anchorSelect="#clickable" clickable place="bottom-start" className="space-y-2">
+                                <p className="text-center font-semibold text-lg">{user.displayName}</p>
+                                <button onClick={handleLogout} className="btn bg-red-500">Log Out</button>
+                            </Tooltip>
+                        </>
+                        : <>
+
+                            <Link to="/login"><a className="btn p-2 bg-red-500 text-white md:text-lg">Login <TbLogin2 /></a></Link>
+                            <Link to="/register"><a className="btn p-2 bg-green-600 text-white md:text-lg">Register <PiCashRegister /></a></Link>
+                        </>}
             </div>
         </div>
     );
 };
 
 export default Navbar;
+// user.photoURL

@@ -75,7 +75,7 @@ const Login = () => {
         console.log(email, password);
         signIn(email, password)
             .then((result) => {
-                console.log(result.user);
+                // console.log(result.user);
 
                 navigate(location?.state ? location.state : '/');
 

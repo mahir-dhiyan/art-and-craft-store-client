@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/Authproviders";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,6 +8,9 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
     const [showPass,setShowPass]=useState(false);
     const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
+    // const location = useLocation();
+    // console.log(location);
     const notifyLogin = () => {
         toast.success('Successfully Registered', {
             position: "top-right",
@@ -69,7 +72,14 @@ const Register = () => {
                 console.log(result.user);
                 notifyLogin();
                 return updateUserProfile(name, photo);
+                
+                
 
+            })
+            .then(() => {
+                setTimeout(() => {
+                    navigate("/");
+                }, 3000); // 3000 milliseconds = 3 seconds
             })
             .catch((error) => {
                 console.error(error);
