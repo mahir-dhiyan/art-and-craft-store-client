@@ -9,6 +9,7 @@ import Register from "../register/Register";
 import AllArt from "../allart/AllArt";
 import MyArt from "../myart/MyArt";
 import AddArt from "../addart/AddArt";
+import Login from "../login/Login";
 
   const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ import AddArt from "../addart/AddArt";
         {
           path: "/addart",
           element: <AddArt></AddArt>,
+        },
+        {
+          path: "/login",
+          element: <Login></Login>,
         },
       ],
     },
