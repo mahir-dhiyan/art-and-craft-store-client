@@ -4,7 +4,7 @@ const Footer = () => {
         <footer className="footer footer-center bg-[#37393A] text-[#ECF2EF]  p-10">
   <aside className="space-y-4">
    
-    <h1 className="text-6xl font-semibold text-[#a95543]">WOVENWOOD</h1>
+    <h1 className="text-3xl md:text-6xl font-semibold text-[#a95543]">WOVENWOOD</h1>
     <p className="font-bold ">
       WOVENWOOD Industries Ltd.
       <br />
