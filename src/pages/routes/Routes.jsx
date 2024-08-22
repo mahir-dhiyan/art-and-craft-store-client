@@ -45,6 +45,7 @@ import ViewDetails from "../viewDetails/ViewDetails";
         {
           path: "/viewDetails/:id",
           element: <ViewDetails></ViewDetails>,
+          loader: ()=>fetch("http://localhost:5000/art")
         },
       ],
     },
