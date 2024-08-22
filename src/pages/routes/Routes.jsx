@@ -29,6 +29,7 @@ import ViewDetails from "../viewDetails/ViewDetails";
         {
           path: "/allart",
           element: <AllArt></AllArt>,
+          loader: ()=> fetch("http://localhost:5000/art")
         },
         {
           path: "/myart",
