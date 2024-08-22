@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../providers/Authproviders";
 const AddArt = () => {
+    const {user}=useContext(AuthContext);
+    
     const handleAddCraft = e =>{
         const notifyArtAdded = () => {
             toast.success('Art Added Successfully', {
@@ -26,8 +30,11 @@ const AddArt = () => {
         const rating = form.rating.value;
         const customization = form.customization.value;
         const processing_time = form.processing_time.value;
+        const stock_status = form.stock_status.value;
+        const email = form.email.value;
+        const name = form.name.value;
         // console.log(image,item_name,subcategory_name,short_description,price,rating,customization,processing_time);
-        const craft = {image,item_name,subcategory_name,short_description,price,rating,customization,processing_time};
+        const craft = {image,item_name,subcategory_name,short_description,price,rating,customization,processing_time,stock_status,email,name};
         // console.log(craft);
         // Send data to the server
         fetch("http://localhost:5000/art",{
@@ -102,6 +109,24 @@ const AddArt = () => {
                                 <span className="label-text">Processing Time</span>
                             </label>
                             <input type="text" placeholder="Processing Time" name="processing_time" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Stock Status</span>
+                            </label>
+                            <input type="text" placeholder="Stock Status" name="stock_status" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" placeholder="Email" name="email" defaultValue={user.email} disabled  className="input input-bordered " required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">User Name</span>
+                            </label>
+                            <input type="text" placeholder="User Name" name="name" defaultValue={user.displayName} className="input input-bordered" required />
                         </div>
 
                         <div className="form-control mt-6">

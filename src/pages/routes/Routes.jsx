@@ -10,6 +10,7 @@ import AllArt from "../allart/AllArt";
 import MyArt from "../myart/MyArt";
 import AddArt from "../addart/AddArt";
 import Login from "../login/Login";
+import ViewDetails from "../viewDetails/ViewDetails";
 
   const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ import Login from "../login/Login";
         {
           path: "/login",
           element: <Login></Login>,
+        },
+        {
+          path: "/viewDetails/:id",
+          element: <ViewDetails></ViewDetails>,
         },
       ],
     },
