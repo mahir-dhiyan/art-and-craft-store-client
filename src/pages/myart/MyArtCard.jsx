@@ -2,8 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/Authproviders";
-const MyArtCard = ({art}) => {
-    const [crafts,setCrafts]=useState([]);
+const MyArtCard = ({art,setArts,arts}) => {
     const{image,item_name,subcategory_name,price,rating,_id,customization,stock_status}=art;
     const handleDelete = ()=>{
         Swal.fire({
@@ -29,8 +28,8 @@ const MyArtCard = ({art}) => {
                                 text: "Your coffee has been deleted.",
                                 icon: "success"
                             });
-                            const remaining = coffees.filter(cof=>cof._id!==_id);
-                            setCoffees(remaining);
+                            const remaining = arts.filter(art=>art._id!==_id);
+                            setArts(remaining);
                         }
                     })
             }
