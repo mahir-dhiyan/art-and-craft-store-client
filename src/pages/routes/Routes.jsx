@@ -11,6 +11,7 @@ import MyArt from "../myart/MyArt";
 import AddArt from "../addart/AddArt";
 import Login from "../login/Login";
 import ViewDetails from "../viewDetails/ViewDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -28,16 +29,16 @@ import ViewDetails from "../viewDetails/ViewDetails";
         },
         {
           path: "/allart",
-          element: <AllArt></AllArt>,
+          element: <PrivateRoutes><AllArt></AllArt></PrivateRoutes>,
           loader: ()=> fetch("http://localhost:5000/art")
         },
         {
           path: "/myart",
-          element: <MyArt></MyArt>,
+          element: <PrivateRoutes><MyArt></MyArt></PrivateRoutes>,
         },
         {
           path: "/addart",
-          element: <AddArt></AddArt>,
+          element: <PrivateRoutes><AddArt></AddArt></PrivateRoutes>,
         },
         {
           path: "/login",

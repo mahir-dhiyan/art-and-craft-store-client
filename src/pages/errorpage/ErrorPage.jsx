@@ -3,7 +3,7 @@ import builder from '../../assets/errorBuilder.png';
 import { Link } from "react-router-dom";
 const ErrorPage = () => {
     return (
-        <div className="bg-gray-900">
+        <div className="bg-gray-900 min-h-screen">
            
            <div className="flex flex-col justify-center items-center   h-screen gap-5"> 
            <img className='mx-auto  w-1/4' src={builder} alt="" />
