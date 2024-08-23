@@ -1,10 +1,41 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
+import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/Authproviders";
 const MyArtCard = ({art}) => {
-    // console.log(art);
+    const [crafts,setCrafts]=useState([]);
     const{image,item_name,subcategory_name,price,rating,_id,customization,stock_status}=art;
     const handleDelete = ()=>{
-        console.log('delete');
+        Swal.fire({
+            title: "Are you sure want to delete this coffee?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/art/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your coffee has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = coffees.filter(cof=>cof._id!==_id);
+                            setCoffees(remaining);
+                        }
+                    })
+            }
+        });
+      
     }
     return (
         <div className="card bg-[#ECECF2]  shadow-xl">
