@@ -1,10 +1,10 @@
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const UpdateItem = () => {
-    // const id = useParams();
+    const {id} = useParams();
     return (
         <div>
-            This is update item
+            This is update item:{id}
         </div>
     );
 };

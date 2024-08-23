@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const MyArtCard = ({art}) => {
-    console.log(art);
+    // console.log(art);
     const{image,item_name,subcategory_name,price,rating,_id,customization,stock_status}=art;
     const handleDelete = ()=>{
         console.log('delete');

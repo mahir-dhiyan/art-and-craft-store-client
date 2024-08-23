@@ -12,6 +12,7 @@ import AddArt from "../addart/AddArt";
 import Login from "../login/Login";
 import ViewDetails from "../viewDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateItem from "../myart/UpdateItem";
 
   const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ import PrivateRoutes from "./PrivateRoutes";
           path: "/myart",
           element: <PrivateRoutes><MyArt></MyArt></PrivateRoutes>,
         },
+        {
+          path: "/updateItem/:id",
+          element: <PrivateRoutes><UpdateItem></UpdateItem></PrivateRoutes>,
+        },
+        
         {
           path: "/addart",
           element: <PrivateRoutes><AddArt></AddArt></PrivateRoutes>,
