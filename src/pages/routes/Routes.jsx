@@ -40,6 +40,7 @@ import UpdateItem from "../myart/UpdateItem";
         {
           path: "/updateItem/:id",
           element: <PrivateRoutes><UpdateItem></UpdateItem></PrivateRoutes>,
+          loader: ()=> fetch("http://localhost:5000/art")
         },
         
         {
