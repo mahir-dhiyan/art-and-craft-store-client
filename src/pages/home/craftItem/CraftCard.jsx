@@ -4,7 +4,7 @@ const CraftCard = ({ craft }) => {
   const { image, item_name, subcategory_name, short_description, price, rating, _id } = craft;
 
   return (
-    <div className="card bg-[#ECECF2]  shadow-xl">
+    <div className="card bg-[#ECECF2] md:max-w-96 shadow-xl">
       <figure>
         <img className="h-96 w-full"
           src={image}
