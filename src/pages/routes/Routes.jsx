@@ -13,6 +13,7 @@ import Login from "../login/Login";
 import ViewDetails from "../viewDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateItem from "../myart/UpdateItem";
+import SubCatView from "../home/craftSubcat/subCatView/SubCatView";
 
   const router = createBrowserRouter([
     {
@@ -50,6 +51,11 @@ import UpdateItem from "../myart/UpdateItem";
         {
           path: "/login",
           element: <Login></Login>,
+        },
+        {
+          path: "/subCatView/:name",
+          element: <SubCatView></SubCatView>,
+          loader: ()=>fetch("http://localhost:5000/art")
         },
         {
           path: "/viewDetails/:id",

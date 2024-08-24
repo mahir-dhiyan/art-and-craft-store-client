@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "./header/Header";
 import Craft from "./craftItem/Craft";
+import CraftSubcat from "./craftSubcat/CraftSubcat";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
           <Helmet><title>Home-Wovenwood</title></Helmet>
             <Header></Header>
             <Craft></Craft>
+            <CraftSubcat></CraftSubcat>
         </div>
     );
 };
