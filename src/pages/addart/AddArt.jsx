@@ -4,9 +4,9 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../providers/Authproviders";
 const AddArt = () => {
-    const {user}=useContext(AuthContext);
-    
-    const handleAddCraft = e =>{
+    const { user } = useContext(AuthContext);
+
+    const handleAddCraft = e => {
         const notifyArtAdded = () => {
             toast.success('Art Added Successfully', {
                 position: "top-right",
@@ -17,7 +17,7 @@ const AddArt = () => {
                 draggable: true,
                 progress: undefined,
                 theme: "colored",
-    
+
             });
         }
         e.preventDefault();
@@ -34,23 +34,23 @@ const AddArt = () => {
         const email = form.email.value;
         const name = form.name.value;
         // console.log(image,item_name,subcategory_name,short_description,price,rating,customization,processing_time);
-        const craft = {image,item_name,subcategory_name,short_description,price,rating,customization,processing_time,stock_status,email,name};
+        const craft = { image, item_name, subcategory_name, short_description, price, rating, customization, processing_time, stock_status, email, name };
         // console.log(craft);
         // Send data to the server
-        fetch("http://localhost:5000/art",{
-            method:'POST',
+        fetch("http://localhost:5000/art", {
+            method: 'POST',
             headers: {
-                'content-type':'application/json'
+                'content-type': 'application/json'
             },
             body: JSON.stringify(craft)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-            if(data.insertedId){
-                notifyArtAdded();
-            };
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    notifyArtAdded();
+                };
+            })
         form.reset();
 
     }
@@ -62,12 +62,7 @@ const AddArt = () => {
                 </div>
                 <div className="card bg-[#ECECF2] rounded-3xl border-dashed border-2 border-[#C56652] w-full  shrink-0 shadow-2xl">
                     <form onSubmit={handleAddCraft} className="card-body">
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Image URL</span>
-                            </label>
-                            <input type="text" placeholder="Image URL" name="image" className="input input-bordered" required />
-                        </div>
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Item Name</span>
@@ -79,6 +74,12 @@ const AddArt = () => {
                                 <span className="label-text">Subcategory Name</span>
                             </label>
                             <input type="text" placeholder="Subcategory Name" name="subcategory_name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Image URL</span>
+                            </label>
+                            <input type="text" placeholder="Image URL" name="image" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -120,7 +121,7 @@ const AddArt = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Email" name="email" defaultValue={user.email} disabled  className="input input-bordered " required />
+                            <input type="email" placeholder="Email" name="email" defaultValue={user.email} disabled className="input input-bordered " required />
                         </div>
                         <div className="form-control">
                             <label className="label">
