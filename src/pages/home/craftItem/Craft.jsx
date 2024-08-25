@@ -4,7 +4,7 @@ import CraftCard from './CraftCard';
 const Craft = () => {
     const [crafts, setCrafts] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/art")
+        fetch("https://art-and-craft-store-server-rouge.vercel.app/art")
             .then(res => res.json())
             .then(data => {
                 const firstSixCrafts = data.slice(0, 6);

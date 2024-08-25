@@ -10,7 +10,7 @@ const MyArt = () => {
     const [filter, setFilter] = useState(""); // State for selected filter
 
     useEffect(() => {
-        fetch(`http://localhost:5000/art/${user?.email}`)
+        fetch(`https://art-and-craft-store-server-rouge.vercel.app/art/${user?.email}`)
             .then(result => result.json())
             .then(data => {
                 setArts(data);

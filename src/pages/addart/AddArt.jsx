@@ -38,7 +38,7 @@ const AddArt = () => {
         const craft = { image, item_name, subcategory_name, short_description, price, rating, customization, processing_time, stock_status, email, name };
         // console.log(craft);
         // Send data to the server
-        fetch("http://localhost:5000/art", {
+        fetch("https://art-and-craft-store-server-rouge.vercel.app/art", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

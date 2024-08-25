@@ -40,7 +40,7 @@ const UpdateItem = () => {
         const name = form.name.value;
         // console.log(image,item_name,subcategory_name,short_description,price,rating,customization,processing_time);
         const craft = {image,item_name,subcategory_name,short_description,price,rating,customization,processing_time,stock_status,email,name};
-        fetch(`http://localhost:5000/art/${oldArt._id}`,{
+        fetch(`https://art-and-craft-store-server-rouge.vercel.app/art/${oldArt._id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

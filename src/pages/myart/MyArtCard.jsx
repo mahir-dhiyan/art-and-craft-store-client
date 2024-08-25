@@ -16,7 +16,7 @@ const MyArtCard = ({ art, setArts, arts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/art/${_id}`, {
+                fetch(`https://art-and-craft-store-server-rouge.vercel.app/art/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

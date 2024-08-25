@@ -6,7 +6,7 @@ const CraftSubcat = () => {
     const [loading, setLoading] = useState(true);
     const [subCat, setSubCat] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/sub")
+        fetch("https://art-and-craft-store-server-rouge.vercel.app/sub")
             .then(result => result.json())
             .then(data => {
                 setSubCat(data);

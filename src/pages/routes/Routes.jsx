@@ -32,7 +32,7 @@ import SubCatView from "../home/craftSubcat/subCatView/SubCatView";
         {
           path: "/allart",
           element: <PrivateRoutes><AllArt></AllArt></PrivateRoutes>,
-          loader: ()=> fetch("http://localhost:5000/art")
+          loader: ()=> fetch("https://art-and-craft-store-server-rouge.vercel.app/art")
         },
         {
           path: "/myart",
@@ -41,7 +41,7 @@ import SubCatView from "../home/craftSubcat/subCatView/SubCatView";
         {
           path: "/updateItem/:id",
           element: <PrivateRoutes><UpdateItem></UpdateItem></PrivateRoutes>,
-          loader: ()=> fetch("http://localhost:5000/art")
+          loader: ()=> fetch("https://art-and-craft-store-server-rouge.vercel.app/art")
         },
         
         {
@@ -55,12 +55,12 @@ import SubCatView from "../home/craftSubcat/subCatView/SubCatView";
         {
           path: "/subCatView/:name",
           element: <SubCatView></SubCatView>,
-          loader: ()=>fetch("http://localhost:5000/art")
+          loader: ()=>fetch("https://art-and-craft-store-server-rouge.vercel.app/art")
         },
         {
           path: "/viewDetails/:id",
           element: <ViewDetails></ViewDetails>,
-          loader: ()=>fetch("http://localhost:5000/art")
+          loader: ()=>fetch("https://art-and-craft-store-server-rouge.vercel.app/art")
         },
       ],
     },
