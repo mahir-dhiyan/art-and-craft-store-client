@@ -19,6 +19,23 @@ const Header = () => {
                 <SwiperSlide  >
                     <div
                         className="relative flex  justify-center items-center h-full min-h-80 bg-center bg-cover "
+                        style={{ backgroundImage: `url(${slider1})` }}
+                    >
+                        <div className="absolute  inset-0 bg-gradient-to-t from-black to-black opacity-30"></div>
+                        <h1 className='md:text-7xl text-4xl z-10 font-semibold text-center text-[#ECF2EF]'>
+                            <Typewriter
+                                words={['Handcrafted Heart, Homely Art']}
+                                loop={0 | false}
+                                cursor
+                                cursorStyle="_"
+                                typeSpeed={70}
+                                deleteSpeed={10}
+                                delaySpeed={1000}
+                            />
+                        </h1></div></SwiperSlide>
+                <SwiperSlide  >
+                    <div
+                        className="relative flex  justify-center items-center h-full min-h-80 bg-center bg-cover "
                         style={{ backgroundImage: `url(${slider2})` }}
                     >
                         <div className="absolute min-h-80 inset-0 bg-gradient-to-t from-black to-black opacity-30"></div>
@@ -51,23 +68,7 @@ const Header = () => {
                             />
                         </h1></div></SwiperSlide>
 
-                <SwiperSlide  >
-                    <div
-                        className="relative flex  justify-center items-center h-full min-h-80 bg-center bg-cover "
-                        style={{ backgroundImage: `url(${slider1})` }}
-                    >
-                        <div className="absolute  inset-0 bg-gradient-to-t from-black to-black opacity-30"></div>
-                        <h1 className='md:text-7xl text-4xl z-10 font-semibold text-center text-[#ECF2EF]'>
-                            <Typewriter
-                                words={['Handcrafted Heart, Homely Art']}
-                                loop={0 | false}
-                                cursor
-                                cursorStyle="__"
-                                typeSpeed={70}
-                                deleteSpeed={10}
-                                delaySpeed={1000}
-                            />
-                        </h1></div></SwiperSlide>
+
 
 
 

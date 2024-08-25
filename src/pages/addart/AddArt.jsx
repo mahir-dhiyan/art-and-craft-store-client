@@ -59,10 +59,10 @@ const AddArt = () => {
         <div className="  min-h-screen">
             <Helmet><title>Add Craft Item-Wovenwood</title></Helmet>
             <div className="hero-content flex-col  ">
-                <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
-                    <h2 className="text-5xl font-semibold"> Add <span className="text-[#C56652]">Craft</span> Item  <IoIosAddCircleOutline className="inline-block" /></h2>
+                <div className="bg-[#ECECF2] dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
+                    <h2 className="text-5xl text-center font-semibold"> Add <span className="text-[#C56652]">Craft</span> Item  <IoIosAddCircleOutline className="inline-block" /></h2>
                 </div>
-                <div className="card bg-[#ECECF2] rounded-3xl border-dashed border-2 border-[#C56652] w-full  shrink-0 shadow-2xl">
+                <div className="card bg-[#ECECF2] dark:bg-gray-400 rounded-3xl border-dashed border-2 border-[#C56652] w-full  shrink-0 shadow-2xl">
                     <form onSubmit={handleAddCraft} className="card-body">
 
                         <div className="form-control">

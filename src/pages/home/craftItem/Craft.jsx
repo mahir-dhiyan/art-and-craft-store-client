@@ -16,7 +16,7 @@ const Craft = () => {
 
     return (
         <div className='mt-4'>
-            <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
+            <div className="bg-[#ECECF2] dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
                 <h2 className="text-5xl font-semibold">  <span className="text-[#C56652]">Craft</span> Items  </h2>
             </div>
             <div className="md:grid md:grid-cols-3 md:gap-5 space-y-4 md:space-y-0 mt-4">

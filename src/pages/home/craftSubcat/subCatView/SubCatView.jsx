@@ -13,7 +13,7 @@ const SubCatView = () => {
     return (
         < div className="min-h-screen">
             <Helmet><title>Subcategorised Items-Wovenwood</title></Helmet>
-            <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
+            <div className="bg-[#ECECF2] dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
                 <h2 className="text-5xl font-semibold">All <span className="text-[#C56652]">{name} </span>Items</h2>
             </div>
             <div className="md:flex md:flex-row flex flex-col gap-4 justify-center">

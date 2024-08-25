@@ -17,7 +17,7 @@ const AllArt = () => {
     return (
         <>
             <Helmet><title>All Art & Craft-Wovenwood</title></Helmet>
-            <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
+            <div className="bg-[#ECECF2] dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
                 <h2 className="text-5xl font-semibold"> All <span className="text-[#C56652]">Art & Craft</span> Items  </h2>
             </div>
             <div className="overflow-x-auto">

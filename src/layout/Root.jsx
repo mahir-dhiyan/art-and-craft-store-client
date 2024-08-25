@@ -6,8 +6,8 @@ import { HelmetProvider } from "react-helmet-async";
 const Root = () => {
     return (
         <HelmetProvider>
-            <div className="bg-[#ECF2EF] back">
-                <div className="bg-[#CCDDD3] sticky top-0 z-10"> <Navbar className=""></Navbar></div>
+            <div className="bg-[#ECF2EF] dark:bg-gray-800 back">
+                <div className="bg-[#CCDDD3] dark:bg-gray-950 sticky top-0 z-10"> <Navbar className=""></Navbar></div>
                 <div className="mx-auto max-w-6xl h-full ">
                     <Outlet></Outlet>
                 </div>

@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaRegEye } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 const Register = () => {
-    const [showPass,setShowPass]=useState(false);
+    const [showPass, setShowPass] = useState(false);
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     // const location = useLocation();
@@ -62,8 +62,8 @@ const Register = () => {
         const name = form.get('name');
         const photo = form.get('photo');
         const password = form.get('password');
-        if(!validPassword(password)){
-                return;
+        if (!validPassword(password)) {
+            return;
         }
         console.log(email, name, photo, password);
 
@@ -72,8 +72,8 @@ const Register = () => {
                 console.log(result.user);
                 notifyLogin();
                 return updateUserProfile(name, photo);
-                
-                
+
+
 
             })
             .then(() => {
@@ -90,7 +90,9 @@ const Register = () => {
             <Helmet>
                 <title>Register-Wovenwood</title>
             </Helmet>
-            <h3 className="text-3xl font-bold text-center mt-6">Please Register</h3>
+            <div className="bg-[#ECECF2] text-center mt-4 dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
+                <h2 className="text-5xl font-semibold"><span className="text-[#C56652]">Register</span> with Email</h2>
+            </div>
             <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
@@ -125,10 +127,10 @@ const Register = () => {
 
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn text-white text-xl border-none bg-[#5C2751]">Create Account</button>
+                    <button className="btn text-white text-xl border-none bg-[#a95543]">Create Account</button>
                 </div>
             </form>
-            <p className="text-center font-semibold text-lg mt-4">Already have an account? Or, want to login with <span className="text-xl font-bold">Google</span> or <span className="text-xl font-bold">Github</span> account? <Link to="/login" className="font-bold text-[#5C2751] text-2xl  hover:text-white">Login</Link></p>
+            <p className="text-center font-semibold dark:text-fuchsia-50 text-lg mt-4">Already have an account? Or, want to login with <span className="text-xl font-bold">Google</span> or <span className="text-xl font-bold">Github</span> account? <Link to="/login" className="font-bold text-[#a95543] text-2xl  hover:text-white">Login</Link></p>
 
 
 

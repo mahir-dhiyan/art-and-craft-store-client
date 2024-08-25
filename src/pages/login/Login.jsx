@@ -95,7 +95,9 @@ const Login = () => {
                 <title>Login-Wovenwood</title>
             </Helmet>
             <div className="col-span-4 ">
-                <h3 className="text-3xl font-bold text-center mt-6">Login with Email</h3>
+            <div className="bg-[#ECECF2] text-center mt-4 dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
+                <h2 className="text-5xl font-semibold"><span className="text-[#C56652]">Login</span> with Email</h2>
+            </div>
                 <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:1/2 mx-auto">
                     <div className="form-control">
                         <label className="label">
@@ -120,10 +122,10 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn text-white text-xl border-none bg-[#5C2751]">Login</button>
+                        <button className="btn text-white text-xl border-none bg-[#a95543]">Login</button>
                     </div>
                 </form>
-                <p className="text-center font-semibold text-lg mt-4">Do not have an account? <Link to="/register" className="font-bold text-[#5C2751] text-2xl  hover:text-white">Register</Link></p>
+                <p className="text-center font-semibold dark:text-fuchsia-50 text-lg mt-4">Do not have an account? <Link to="/register" className="font-bold text-[#a95543] text-2xl  hover:text-white">Register</Link></p>
 
                 <ToastContainer
                     position="top-right"
@@ -140,9 +142,9 @@ const Login = () => {
                 />
             </div>
             <div className="space-y-4 p-4 md:p-0">
-                <h3 className="text-3xl font-bold text-center mt-6 md:mt-28">Alternative Login</h3>
-                <button onClick={signInWithGoogle} className="btn btn-outline w-full font-bold border-2 text-[#5C2751] h-20 text-lg "> <FaGoogle /> Sign in with Google</button>
-                <button onClick={signInWithGithub} className="btn btn-outline w-full font-bold border-2 text-[#5C2751] h-20 text-lg "> <FaGithub className="text-xl" /> Sign in with Github</button>
+                <h3 className="text-3xl font-bold dark:text-fuchsia-50 text-center mt-6 md:mt-28">Alternative Login</h3>
+                <button onClick={signInWithGoogle} className="btn btn-outline w-full font-bold border-2 text-[#a95543] h-20 text-lg "> <FaGoogle /> Sign in with Google</button>
+                <button onClick={signInWithGithub} className="btn btn-outline w-full font-bold border-2 text-[#a95543] h-20 text-lg "> <FaGithub className="text-xl" /> Sign in with Github</button>
             </div>
         </div>
     );

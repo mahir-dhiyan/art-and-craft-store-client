@@ -63,10 +63,10 @@ const UpdateItem = () => {
     return (
         <div className="  min-h-screen">
         <div className="hero-content flex-col  ">
-            <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
+            <div className="bg-[#ECECF2] dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
                 <h2 className="text-5xl font-semibold"> Update <span className="text-[#C56652]">Craft</span> Item  </h2>
             </div>
-            <div className="card bg-[#ECECF2] rounded-3xl border-dashed border-2 border-[#C56652] w-full  shrink-0 shadow-2xl">
+            <div className="card bg-[#ECECF2] dark:bg-gray-400 rounded-3xl border-dashed border-2 border-[#C56652] w-full  shrink-0 shadow-2xl">
                 <form onSubmit={handleUpdateCraft} className="card-body">
                     <div className="form-control">
                         <label className="label">
