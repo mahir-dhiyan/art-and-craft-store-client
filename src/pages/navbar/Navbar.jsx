@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/Authproviders";
 import { Tooltip } from 'react-tooltip'
 import { IoPerson } from "react-icons/io5";
+import ThemeToggle from "./ThemeToggle";
 const Navbar = () => {
     const { logOut, user } = useContext(AuthContext);
     const handleLogout = () => {
@@ -62,6 +63,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end space-x-2">
+                <ThemeToggle></ThemeToggle>
                 {
                     user ?
                         <>
@@ -89,8 +91,9 @@ const Navbar = () => {
                         </>
                         : <>
 
-                            <Link to="/login"><a className="btn p-2 bg-red-500 text-white md:text-lg">Login <TbLogin2 /></a></Link>
-                            <Link to="/register"><a className="btn p-2 bg-green-600 text-white md:text-lg">Register <PiCashRegister /></a></Link>
+                            <Link to="/login"><a className="btn p-2 bg-red-500 text-white md:text-lg">Login <TbLogin2 className="hidden md:block" /></a></Link>
+                            <Link to="/register"><a className="btn p-2 bg-green-600 text-white md:text-lg">Register 
+                                <PiCashRegister className="hidden md:block"/></a></Link>
                         </>}
             </div>
         </div>
