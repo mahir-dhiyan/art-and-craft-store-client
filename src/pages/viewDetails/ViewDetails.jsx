@@ -15,7 +15,7 @@ const ViewDetails = () => {
             </div>
             <div className="card bg-[#ECECF2] md:flex md:flex-row rounded-3xl m-4 shadow-xl">
                 <div className="flex justify-center">
-                    <img className="md:h-96 w-80 rounded-3xl"
+                    <img className="md:h-96 md:w-80  rounded-3xl"
                         src={image}
                         alt="products" />
                 </div>
