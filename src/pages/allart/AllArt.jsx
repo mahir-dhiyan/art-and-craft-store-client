@@ -21,7 +21,7 @@ const AllArt = () => {
                 <h2 className="text-5xl font-semibold"> All <span className="text-[#C56652]">Art & Craft</span> Items  </h2>
             </div>
             <div className="overflow-x-auto">
-                <table className="table table-xs table-pin-rows table-pin-cols">
+                <table className="table table-xs table-pin-rows   table-pin-cols">
                     <thead>
                         <tr className="">
                             <th className="bg-[#A95543] text-white"></th>
@@ -36,8 +36,8 @@ const AllArt = () => {
                         crafts.map((craft, index) => (
                             <tbody>
                                 {/* row 1 */}
-                                <tr className="hover text-base font-medium">
-                                    <th >{index + 1}</th>
+                                <tr className=" text-black dark:text-fuchsia-50 font-medium">
+                                    <th className="text-black">{index + 1}</th>
                                     <td >{craft.item_name}</td>
                                     <td >{craft.subcategory_name}</td>
                                     <td >{craft.name}</td>
