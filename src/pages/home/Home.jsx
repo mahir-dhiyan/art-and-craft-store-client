@@ -3,6 +3,7 @@ import Header from "./header/Header";
 import Craft from "./craftItem/Craft";
 import CraftSubcat from "./craftSubcat/CraftSubcat";
 import Map from "./map/Map";
+import CustomIdea from "./customIdea/CustomIdea";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Craft></Craft>
             <CraftSubcat></CraftSubcat>
             <Map></Map>
+            <CustomIdea></CustomIdea>
         </div>
     );
 };
