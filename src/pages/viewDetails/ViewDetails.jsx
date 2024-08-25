@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const ViewDetails = () => {
@@ -8,6 +9,7 @@ const ViewDetails = () => {
     const { image, item_name, subcategory_name, short_description, price, rating, customization, processing_time, stock_status, email, name } = art;
     return (
         <>
+            <Helmet><title>View Details-Wovenwood</title></Helmet>
             <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
                 <h2 className="text-5xl font-semibold">  <span className="text-[#C56652]">Craft</span> Details  </h2>
             </div>

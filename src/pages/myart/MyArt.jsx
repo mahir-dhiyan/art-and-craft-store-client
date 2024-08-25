@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/Authproviders";
 import MyArtCard from "./MyArtCard";
+import { Helmet } from "react-helmet-async";
 
 const MyArt = () => {
     const { user } = useContext(AuthContext);
@@ -16,17 +17,17 @@ const MyArt = () => {
                 setLoading(false);
             })
     }, []);
-     // Filter the arts based on the selected customization filter
-     const filteredArts = filter 
-     ? arts.filter(art => art.customization === filter)
-     : arts;
+    // Filter the arts based on the selected customization filter
+    const filteredArts = filter
+        ? arts.filter(art => art.customization === filter)
+        : arts;
     if (loading) {
         return <div className="mx-auto  flex justify-center h-screen"><span className="loading w-40  mx-auto  loading-infinity "></span></div>
     }
     console.log(filter);
     return (
         <div className="min-h-screen">
-
+            <Helmet><title>My Art & Craft-Wovenwood</title></Helmet>
             <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
                 <h2 className="text-5xl font-semibold"> My <span className="text-[#C56652]">Art & Craft</span> List</h2>
             </div>
@@ -36,11 +37,11 @@ const MyArt = () => {
                 <label htmlFor="filter" className="mr-2 text-xl font-bold">Filter by Customization:</label>
                 <select
                     id="filter"
-                    value={filter} 
+                    value={filter}
                     onChange={(e) => setFilter(e.target.value)}
                     className="border rounded p-2"
                 >
-                    
+
                     <option value="">All</option>
                     <option value="Yes">Customization: Yes</option>
                     <option value="No">Customization: No</option>

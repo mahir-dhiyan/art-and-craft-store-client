@@ -3,6 +3,7 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../providers/Authproviders";
+import { Helmet } from "react-helmet-async";
 const AddArt = () => {
     const { user } = useContext(AuthContext);
 
@@ -56,6 +57,7 @@ const AddArt = () => {
     }
     return (
         <div className="  min-h-screen">
+            <Helmet><title>Add Craft Item-Wovenwood</title></Helmet>
             <div className="hero-content flex-col  ">
                 <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
                     <h2 className="text-5xl font-semibold"> Add <span className="text-[#C56652]">Craft</span> Item  <IoIosAddCircleOutline className="inline-block" /></h2>
