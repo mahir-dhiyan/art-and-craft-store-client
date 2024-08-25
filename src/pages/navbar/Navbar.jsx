@@ -101,4 +101,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// user.photoURL
