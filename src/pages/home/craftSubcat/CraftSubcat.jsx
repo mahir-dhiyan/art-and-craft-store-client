@@ -3,15 +3,19 @@ import { useState } from "react";
 import CatCard from "./CatCard";
 
 const CraftSubcat = () => {
-    // const [loading, setLoading] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [subCat, setSubCat] = useState([]);
     useEffect(() => {
         fetch("http://localhost:5000/sub")
             .then(result => result.json())
             .then(data => {
                 setSubCat(data);
+                setLoading(false);
             })
     }, []);
+    if (loading) {
+        return <div className="mx-auto  flex justify-center h-screen"><span className="loading w-40  mx-auto  loading-infinity "></span></div>
+    }
     return (
         <div className="mt-4">
             <div className="bg-[#ECECF2] p-4 rounded-3xl border-dashed border-2 border-[#C56652] text-center m-4">
