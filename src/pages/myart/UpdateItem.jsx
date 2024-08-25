@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { AuthContext } from "../../providers/Authproviders";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 const UpdateItem = () => {
     const {id} = useParams();
     // const {user}=useContext(AuthContext);
@@ -62,6 +63,7 @@ const UpdateItem = () => {
     }
     return (
         <div className="  min-h-screen">
+            <Helmet><title>Update Craft-Wovenwood</title></Helmet>
         <div className="hero-content flex-col  ">
             <div className="bg-[#ECECF2] dark:bg-gray-300 p-4 rounded-3xl border-dashed border-2 border-[#C56652] ">
                 <h2 className="text-5xl font-semibold"> Update <span className="text-[#C56652]">Craft</span> Item  </h2>
