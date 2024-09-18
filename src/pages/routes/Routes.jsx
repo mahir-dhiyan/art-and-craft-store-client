@@ -59,7 +59,7 @@ import SubCatView from "../home/craftSubcat/subCatView/SubCatView";
         },
         {
           path: "/viewDetails/:id",
-          element: <ViewDetails></ViewDetails>,
+          element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
           loader: ()=>fetch("https://art-and-craft-store-server-rouge.vercel.app/art")
         },
       ],
